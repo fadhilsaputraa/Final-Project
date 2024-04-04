@@ -143,6 +143,11 @@ public class HomePage {
 				alert(AlertType.ERROR, "Error", "Validation Error", "Fill in required fields!");
 				return;
 			}
+
+			if (checkID()) {
+				alert(AlertType.ERROR, "Error", "Validation Error", "Menu already exists");
+				return;
+			}
 			
 			try {
 				Integer.valueOf(price);
